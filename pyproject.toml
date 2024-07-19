@@ -1,0 +1,33 @@
+[tool.poetry]
+name = "lyrics-classification"
+version = "0.1.0"
+description = ""
+authors = ["Shashank Pathipati <pshashank569@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pandas = "^2.2.2"
+gensim = "^4.3.2"
+nltk = "^3.8.1"
+scikit-learn = "^1.5.1"
+numpy = "<2"
+scipy = "1.12"
+matplotlib = "^3.9.1"
+transformers = "^4.42.4"
+tqdm = "^4.66.4"
+torch = {version = "^2.3.1+cu121", source = "pytorch-gpu-src"}
+
+
+[tool.poetry.group.dev.dependencies]
+ipykernel = "^6.29.5"
+
+
+[[tool.poetry.source]]
+name = "pytorch-gpu-src"
+url = "https://download.pytorch.org/whl/cu121"
+priority = "explicit"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
